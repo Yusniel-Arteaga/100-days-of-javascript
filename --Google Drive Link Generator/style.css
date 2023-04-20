@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  
+}
+
+.container {
+  display: flex;
+ 
+  height: 100vh;
+  
+}
+
+/* Instructions section css */
+
+.instructions {
+  background-color: #1c2b2d;
+  padding: 0 15px;
+  color: white;
+  padding-top: 40px;
+  width: 25%;
+}
+
+.instructions h1 {
+  color: #db6400;
+  font-size: 2.2rem;
+  
+}
+
+.line {
+  position: relative;
+  margin: 5px 0;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  height: 2px;
+  background-color: #eee;
+
+}
+.instructions p {
+  margin-bottom: 0;
+
+}
+.instructions hr {
+  margin-top: 0;
+}
+
+.instructions ol {
+  padding-left: 25px;
+  line-height: 25px;
+}
+
+.instructions ol a {
+  color: #db6400;
+  text-decoration: none;
+
+}
+
+/* Google Generator Css */
+
+.google-gen {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  text-align: center;
+
+}
+
+
+.google-header h1 {
+  color: #9d0191;
+  font-size: 2.2rem;
+
+}
+
+.content input[type=radio] {
+  display: none;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content nav {
+  padding: 0px 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin: 0;
+  width: 66%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+ 
+}
+.content nav label {
+  padding: 20px 10px;
+}
+.content nav:hover, nav label:hover {
+  cursor: pointer;
+  
+}
+
+
+.content nav i {
+  color: #db6400;
+}
+
+nav .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26%;
+  height: 100%;
+  background-color: #9d0191;
+  border-radius: 3px;
+  z-index: -1;
+  transition: all .3s;
+}
+#audio:checked ~ nav .slide{
+  left: 26%;
+  width: 33%;
+}
+#video:checked ~ nav .slide {
+  left: 59%;
+  width: 41%
+}
+#paste:checked ~ nav.slide {
+  left: 0;
+}
+#paste:checked ~ nav label.paste, 
+#audio:checked ~ nav label.audio, 
+#video:checked ~ nav label.video 
+{
+  color: white;
+}
+.g-content {
+  display: none;
+}
+
+#paste:checked ~ .google-link .glink-container {
+  display: block;
+}
+#audio:checked ~ .google-link .audio-container {
+  display: block;
+}
+#video:checked ~ .google-link .video-container {
+  display: block;
+}
+
+
+.content label i {
+  margin-right: 3px;
+}
+
+/* Google Drive Link Css */
+
+.google-link {
+  border: 2px solid #9d0191;
+  border-radius: 0 0 10px 10px;
+  margin-top: 0px;
+  width: 68%;
+}
+/* delete border*/
+.glink-container, .audio-container, .video-container { 
+  margin: 5% 10%;
+  padding: 15px;
+  /* border: 1px solid black; */
+}
+.google-link i {
+  border: 2px solid;
+  color: #db6400;
+  font-size: 3rem;
+  border-radius: 5rem;
+  padding: .8rem;
+  
+}
+
+/* .small-line {
+  position: relative;
+  margin: 5px 0;
+}
+.small-line::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: 50%;
+  width: 5%;
+  height: 2px;
+  background-color: #a09d9da4;
+
+} */
+.google-link h2 {
+  margin: 10px;
+}
+.google-link p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.glink-container .icon-div {
+  position: relative;
+}
+.glink-container form i {
+  font-size: 1rem;
+  border: none;
+  position: absolute;
+  left: 0%;
+  bottom: 15%;
+}
+.glink-container .icon-div input {
+  text-indent: 35px;
+  padding: .8rem 0;
+  width: 100%;
+  margin: 8px 0;
+  border-radius: 50px 0;
+  border-bottom: 1px solid #db6400;
+  font-size: 1.2rem;
+
+}
+
+.btn {
+  text-indent: 35px;
+  padding: .8rem 0;
+  width: 100%;
+  border-radius: 0 50px;
+  font-size: 1.2rem;
+  background-color: #db6400;
+  color: white;
+}
+.btn:hover {
+  background-color: #9d0191;
+  cursor: pointer;
+}
+.google-link form {
+  position: relative;
+}
+.google-link form textarea {
+  width: 100%;
+  height: 70px;
+  outline: none;
+}
+
+.google-link .copy {
+  padding: 5px;
+  position: absolute;
+  right: -5px;
+  bottom: 2%;
+  z-index: 3;
+  font-size: 1.1rem;
+  background-color: #9d0191;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 10px 0 0 0;
+  transition: all .3s;
+}
+.audio-container .copy, .video-container .copy{
+  bottom: 6%;
+}
+.copy:hover {
+  background-color: white;
+  color: #9d0191;
+  border: 2px solid #9d0191;
+  cursor: pointer;
+}

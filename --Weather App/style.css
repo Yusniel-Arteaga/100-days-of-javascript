@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  background: linear-gradient(to right bottom, rgb(241, 85, 111), rgb(44, 44, 240));
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.container {
+  background: url(images/weather.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 320px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.search {
+  width: 100%;
+  height: 40px;
+  border-radius: 0 20px 0 20px;
+  outline: none;
+  border: none;
+  border-bottom: solid 3px rgb(0, 255, 0);
+  margin-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+.search::placeholder {
+  text-align: center;
+  color: white;
+
+}
+
+.btn {
+  border-radius: 20px 0 20px 0;
+  width: 100%;
+  height: 40px;
+  background-color: #db6400;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #f78121;
+  cursor: pointer;
+}
+.error {
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Bottom */
+
+.bottom{
+  width: 60%;
+  
+}
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  width: 80px;
+  border: 1px dotted white;
+
+}
+
+.location {
+  text-align: center;
+  margin: 8px;
+}
+
+.date {
+  margin-bottom: 8px;
+}
+
+.temp {
+  margin: 8px 0;
+}
+
+.temp-range {
+  margin: 8px 0;
+}

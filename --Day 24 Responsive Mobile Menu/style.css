@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.main {
+  width: 80%;
+  margin: 0 auto;
+  min-width: 60%;
+  max-width: 80%;
+}
+
+
+/* sdvsdv */
+header, nav{
+  display: flex;
+  justify-content: space-around; 
+  list-style: none;
+  width: 100%;
+  flex-wrap: wrap;
+
+
+}
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 100%;
+
+}
+header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  transition: all .5s;
+  
+}
+
+/* sticky */
+
+header.sticky{
+  background-color: rgba(229, 228, 228, 0.8);
+  padding: 1.3rem 0;
+  border-bottom: 1px solid black;
+  
+}
+
+header.sticky nav a{
+  color: rgb(255, 255, 255);
+}
+
+.header-bg{
+  background: url(images/bg-girl.jpg) no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  
+  margin-bottom: 50px;
+
+}
+
+
+
+h1 {
+  color: #db6400;
+  padding-top: 10px;
+  font-size: 30px;
+}
+nav {
+  padding-top: 20px;
+}
+nav li a{
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+}
+
+
+.main > * {
+  border: 1px solid black;
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10% 50px 10%;
+  
+}
+h2{
+  color: #9d0191;
+  margin: 10px;
+}
+
+.i {
+  display: flex;
+  overflow-wrap: break-word;
+}
+.i img {
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+}
+
+.i p{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+  text-align: left;
+
+}
+
+
+
+.active {
+  position: relative;
+}
+
+header.sticky nav .active > * {
+  color: #db6400;
+}
+.active > * {
+  color: #db6400;
+}
+
+.active::before{
+  position: absolute;
+  content: "";
+  left: 10px;
+  bottom: 0;
+  background-color: #fff;
+  width: 75%;
+  height: 1px;
+}
+
+
+/* Animated Scroll To Top */
+
+.top {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  padding: 15px 10px;
+  background-color: white;
+  outline: none;
+  border: 2px solid #db6400;
+  border-radius: 3px;
+  color: #db6400;
+  font-size: 1.3rem;
+  transform: translateY(10rem);
+  transition: all .3s;
+}
+
+.top:hover {
+  color: #fff;
+  background-color: #db6400;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.scroll-btn {
+  transform: translateY(0);
+}
+
+
+/* Responsive Mobile Menu */
+
+nav i {
+  color: transparent;
+}
+
+.nav-list li a:hover {
+  font-size: 25px;
+  color: #db6400;
+
+}
+
+
+@media screen and (max-width: 600px) {
+  nav {
+    position: relative;
+    width: 90%;
+  }
+  /* body image and para */
+  .i {
+    flex-direction: column;
+
+  }
+  /*  */
+  nav i {
+    color: white;
+    font-size: 2rem;
+  }
+  .close, .hamburger {
+    position: absolute;
+    right: 2rem;
+    /* transform: translateY(-20rem); */
+    transition: all 0.3s;
+    z-index: 50;
+    color: #f98f38;
+    /* margin-top: 2.5rem; */
+  }
+  .nav-list {
+    flex-direction: column;
+    transform: translateY(-80rem);
+    margin-top: 2.5rem;
+
+  }
+
+  /* write javascript code that shows what is below when the menu is hidden */
+  
+
+  .nav-list li{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    margin: 0 auto;
+    padding: 0 50%;
+    border-bottom: 1px solid white;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 33;
+  }
+  
+ 
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1935d064dd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="instructions">
+        <h1 class="line">
+          Instructions
+        </h1>
+        <p>Follow the instructions below to
+          get your Google Drive file link
+        </p>
+        <hr>
+        <ol>
+          <li>Open <a href="https://drive.google.com/" target="_blank">Google Drive</a></li>
+          <li>Right click on a file.</li>
+          <li>Select "Get link" and click
+            "Copy link".</li>
+          <li>Paste the link here and click
+            "Generate Direct Link" button.</li>
+        </ol>
+
+
+      </section>
+      <section class="google-gen">
+        <div class="google-header">
+          <h1>
+            Google Direct Download Link Generator
+          </h1>
+          
+        </div>
+        <div class="content">
+          <input type="radio" id="paste" name="radio" checked>
+          <input type="radio" id="audio" name="radio">
+          <input type="radio" id="video" name="radio">
+          <nav >
+            <label for="paste" class="paste"><i class="fas fa-sign-in-alt"></i>Paste Link</label>
+            <label for="audio" class="audio"><i class="fas fa-headphones-alt"></i>Embed Audio</label>
+            <label for="video" class="video"><i class="fas fa-photo-video"></i>Embed Video/Docs</label>
+            <div class="slide"></div>
+          </nav>
+          
+          <!-- Paste Link -->
+          <div class="google-link">
+            <div class="g-content glink-container">
+              <i class="fas fa-download"></i>
+              <h2 class="small-line">Google Drive Link</h2>
+              <p>Paste your Google Drive File link below</p>
+              <form action="">
+                <div class="icon-div">
+                  <i class="fab fa-google-drive"></i>
+                  <input type="text" id="google-drive-link" placeholder="Google Drive Link">
+                </div>
+                <button class="btn">Generate Direct Download Link</button>
+                <h2>Direct Download link</h2>
+                <textarea id="paste-link"></textarea><span class="copy">Copy</span>
+              </form>
+            </div>
+          <!-- Embed Audio -->
+            <div class="g-content audio-container">
+              <i class="fas fa-headphones"></i>
+              <h2 class="small-line">Audio Embed Link</h2>
+              <p>If your link was an Audio file, use the code 
+                snippet to embed it on a web page.
+              </p>
+              <hr>
+              <h2>Audio Embed Link</h2>
+              <form action="">
+                <textarea id="embed-audio"></textarea><span class="copy copy-audio">Copy</span>
+              </form>
+            </div>
+          <!-- Embed Video/Docs -->
+          <div class="g-content video-container">
+            <i class="fas fa-photo-video"></i>
+            <h2 class="small-line">Video/Doc Embed Link</h2>
+            <p>If your link was an Video or Document, use 
+              the code snippet to embed it on a web page.
+            </p>
+            <hr>
+            <h2>Video/Document Embed Link</h2>
+            <form action="">
+              
+              <textarea id="embed-video"></textarea><span class="copy copy-video">Copy</span>
+            </form>
+          </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
